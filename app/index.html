@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ergorent</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/modernizr-custom.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__logo">
+                        <a href="#">
+                            <picture>
+                                <source srcset="images/logo.webp" type="image/webp">
+                                <img src="images/logo.png">
+                            </picture>
+                        </a>
+                    </div>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item active">
+                                <a href="#">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#">
+                                    FAQ
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="country">
+                        <picture>
+                            <source srcset="images/rus.webp" type="image/webp">
+                            <img src="images/rus.png">
+                        </picture>
+                        <div class="country-text">
+                            RUS
+                        </div>
+                    </div>
+                    <div class="header__box">
+                        <div class="header__box-wrap">
+                            <a class="add-object elem btn" href="#">
+                                Добавить свой объект
+                            </a>
+                            <a class="registration elem btn" href="#">
+                                Зарегистрироваться
+                            </a>
+                            <a class="enter elem btn" href="#">
+                                Войти в аккаунт
+                            </a>
+                        </div>
+                    </div>
+                    <div class="burger-menu">
+                        <div class="first-line"></div>
+                        <div class="second-line"></div>
+                        <div class="third-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs__inner">
+                <div class="breadcrumbs__list">
+                    <li><a class="active" href="#">Главная</a></li>
+                    <li><a href="#">Украина</a></li>
+                    <li><a href="#">Киев</a></li>
+                    <li><span>Результаты поиска</span></li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <div class="main__inner">
+                <div class="aside">
+                    <div class="aside__wrapper">
+                        <div class="aside__title">
+                            Найти
+                        </div>
+                        <form class="form">
+                            <div class="form-city form-box form-boxs">
+                                <input type="text" placeholder="Город / название объекта">
+                            </div>
+                            <div>
+                                <div class="data">
+                                    Дата заезда:
+                                </div>
+                                <div class="form-box date-arrival">
+                                    <input type="text" id="datepicker" placeholder="суббота, 13 марта 2021">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    Дата отъезда:
+                                </div>
+                                <div class="form-box date-departure">
+                                    <input type="text" id="datepicker-1" placeholder="воскресенье, 14 марта 2021">
+                                </div>
+                            </div>
+                            <span class="night">3 ночи</span>
+                            <div class="form-box adult form-boxs">
+                                <input type="text" placeholder="1 взрослый">
+                            </div>
+                            <div class="children-room">
+                                <div class="children">
+                                    <select>
+                                        <option value="Без детей">Без детей</option>
+                                        <option value="1 детей">1 детей</option>
+                                        <option value="2 детей">2 детей</option>
+                                        <option value="3 детей">3 детей</option>
+                                        <option value="4 детей">4 детей</option>
+                                        <option value="5 детей">5 детей</option>
+                                    </select>
+                                </div>
+                                <div class="room">
+                                    <select>
+                                        <option value="1 номер">1 номер</option>
+                                        <option value="2 номер">2 номер</option>
+                                        <option value="3 номер">3 номер</option>
+                                        <option value="4 номер">4 номер</option>
+                                        <option value="5 номер">5 номер</option>
+                                        <option value="6 номер">6 номер</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="travel">
+                                <input type="checkbox" id="checkbox">
+                                <label class="travel-text" for="checkbox">
+                                    Я путешествую по работе
+                                </label>
+                            </div>
+                            <div class="form-btn">
+                                <button type="submit">
+                                    <picture>
+                                        <source srcset="images/search.webp" type="image/webp">
+                                        <img src="images/search.png">
+                                    </picture>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="list__items">
+                        <div class="list__item line">
+                            <a href="#">
+                                Информация об апартаментах и стоимости
+                            </a>
+                        </div>
+                        <div class="list__item">
+                            <a href="#">
+                                Удобства и услуги
+                            </a>
+                        </div>
+                        <div class="list__item">
+                            <a href="#">
+                                Условия размещения
+                            </a>
+                        </div>
+                        <div class="list__item">
+                            <a href="#">
+                                Примечания
+                            </a>
+                        </div>
+                        <div class="list__item">
+                            <a href="#">
+                                Отзывы
+                            </a>
+                        </div>
+                    </div>
+                    <div class="main-info">
+                        <div class="main-info__top">
+                            <div class="main-info__title">
+                                Central Dayflat Apartments
+                                <div class="main-info__start">
+                                    <div class="start__item">
+                                        <img src="images/star.svg">
+                                    </div>
+                                    <div class="start__item">
+                                        <img src="images/star.svg">
+                                    </div>
+                                    <div class="start__item">
+                                        <img src="images/star.svg">
+                                    </div>
+                                    <div class="start__item">
+                                        <img src="images/star.svg">
+                                    </div>
+                                    <div class="start__item">
+                                        <img src="images/star.svg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-info__recall">
+                                <div class="recall__text">
+                                    <div class="recall__subject">
+                                        Потрясающе
+                                    </div>
+                                    <div class="recall__caption">
+                                        734 отзыва
+                                    </div>
+                                </div>
+                                <div class="recall__rating">
+                                    8.8
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-info__content">
+                            <div class="content__disposition">
+                                <ul class="disposition__list">
+                                    <li class="disposition__items line">
+                                        <a href="#">
+                                            Шевченковский, Киев
+                                        </a>
+                                    </li>
+                                    <li class="disposition__items line margin-left">
+                                        <a href="#">
+                                            Показать на карте
+                                        </a>
+                                    </li>
+                                    <li class="disposition__items margin-top">500m от центра</li>
+                                    <li class="disposition__items margin-left margin-top">400m от метро</li>
+                                </ul>
+                                <a class="content__benefit" href="#">
+                                    Выгодный вариант
+                                </a>
+                            </div>
+                            <div class="main-info__galery">
+                                <a class="galery-top room-1" href="images/room-big-1.jpg" data-fancybox="gallery">
+                                    <picture>
+                                        <source srcset="images/room-1.webp" type="image/webp">
+                                        <img src="images/room-1.jpg">
+                                    </picture>
+                                </a>
+                                <div class="galery-bottom">
+                                    <a class="galery-bottom__item" href="images/room-big-2.jpg" data-fancybox="gallery">
+                                        <picture>
+                                            <source srcset="images/room-2.webp" type="image/webp">
+                                            <img src="images/room-2.jpg">
+                                        </picture>
+                                    </a>
+                                    <a class="galery-bottom__item" href="images/room-big-3.jpg" data-fancybox="gallery">
+                                        <picture>
+                                            <source srcset="images/room-3.webp" type="image/webp">
+                                            <img src="images/room-3.jpg">
+                                        </picture>
+                                    </a>
+                                    <a class="galery-bottom__item" href="images/room-big-4.jpg" data-fancybox="gallery">
+                                        <picture>
+                                            <source srcset="images/room-4.webp" type="image/webp">
+                                            <img src="images/room-4.jpg">
+                                        </picture>
+                                    </a>
+                                    <div class="galery-bottom__item background">
+                                        <p class="imglist">
+                                            <a class="imgs-link" href="images/room-big-5.jpg" data-fancybox="images">
+                                                <span class="substrate">
+                                                    <span class="link">
+                                                        +12 фотографий
+                                                    </span>
+                                                </span>
+                                                <picture>
+                                                    <source srcset="images/room-5.webp" type="image/webp">
+                                                    <img src="images/room-5.jpg">
+                                                </picture>
+                                            </a>
+                                            <a href="images/room-big-4.jpg" data-fancybox="images">
+                                                <picture>
+                                                    <source srcset="images/room-4.webp" type="image/webp">
+                                                    <img src="images/room-4.jpg">
+                                                </picture>
+                                            </a>
+                                            <a href="images/room-big-3.jpg" data-fancybox="images">
+                                                <picture>
+                                                    <source srcset="images/room-3.webp" type="image/webp">
+                                                    <img src="images/room-3.jpg">
+                                                </picture>
+                                            </a>
+                                            <a href="images/room-big-2.jpg" data-fancybox="images">
+                                                <picture>
+                                                    <source srcset="images/room-2.webp" type="image/webp">
+                                                    <img src="images/room-2.jpg">
+                                                </picture>
+                                            </a>
+                                            <a href="images/room-big-5.jpg" data-fancybox="images">
+                                                <picture>
+                                                    <source srcset="images/room-5.webp" type="image/webp">
+                                                    <img src="images/room-5.jpg">
+                                                </picture>
+                                            </a>
+                                            <a href="images/room-big-4.jpg" data-fancybox="images">
+                                                <picture>
+                                                    <source srcset="images/room-4.webp" type="image/webp">
+                                                    <img src="images/room-4.jpg">
+                                                </picture>
+                                            </a>
+                                            <a href="images/room-big-3.jpg" data-fancybox="images">
+                                                <picture>
+                                                    <source srcset="images/room-3.webp" type="image/webp">
+                                                    <img src="images/room-3.jpg">
+                                                </picture>
+                                            </a>
+                                            <a href="images/room-big-2.jpg" data-fancybox="images">
+                                                <picture>
+                                                    <source srcset="images/room-2.webp" type="image/webp">
+                                                    <img src="images/room-2.jpg">
+                                                </picture>
+                                            </a>
+                                            <a href="images/room-big-5.jpg" data-fancybox="images">
+                                                <picture>
+                                                    <source srcset="images/room-5.webp" type="image/webp">
+                                                    <img src="images/room-5.jpg">
+                                                </picture>
+                                            </a>
+                                            <a href="images/room-big-4.jpg" data-fancybox="images">
+                                                <picture>
+                                                    <source srcset="images/room-4.webp" type="image/webp">
+                                                    <img src="images/room-4.jpg">
+                                                </picture>
+                                            </a>
+                                            <a href="images/room-big-3.jpg" data-fancybox="images">
+                                                <picture>
+                                                    <source srcset="images/room-3.webp" type="image/webp">
+                                                    <img src="images/room-3.jpg">
+                                                </picture>
+                                            </a>
+                                            <a href="images/room-big-2.jpg" data-fancybox="images">
+                                                <picture>
+                                                    <source srcset="images/room-2.webp" type="image/webp">
+                                                    <img src="images/room-2.jpg">
+                                                </picture>
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-info__advantage">
+
+                                <div class="advantage__items-wrap">
+
+                                    <div class="advantage__items">
+
+                                        <div class="advantage__item">
+                                            <div class="advantage__item-img">
+                                                <picture>
+                                                    <source srcset="images/house.webp" type="image/webp">
+                                                    <img src="images/house.png">
+                                                </picture>
+                                            </div>
+                                            <div class="advantage__item-text">
+                                                Апартаменты
+                                            </div>
+                                        </div>
+                                        <div class="advantage__item">
+                                            <div class="advantage__item-img">
+                                                <picture>
+                                                    <source srcset="images/household.webp" type="image/webp">
+                                                    <img src="images/household.png">
+                                                </picture>
+                                            </div>
+                                            <div class="advantage__item-text">
+                                                Стиральная машина
+                                            </div>
+                                        </div>
+                                        <div class="advantage__item">
+                                            <div class="advantage__item-img">
+                                                <picture>
+                                                    <source srcset="images/wifi-big.webp" type="image/webp">
+                                                    <img src="images/wifi-big.png">
+                                                </picture>
+                                            </div>
+                                            <div class="advantage__item-text">
+                                                Бесплатный WI-FI
+                                            </div>
+                                        </div>
+                                        <div class="advantage__item">
+                                            <div class="advantage__item-img">
+                                                <picture>
+                                                    <source srcset="images/air-conditioner-big.webp" type="image/webp">
+                                                    <img src="images/air-conditioner-big.png">
+                                                </picture>
+                                            </div>
+                                            <div class="advantage__item-text">
+                                                Кондиционер
+                                            </div>
+                                        </div>
+                                        <div class="advantage__item">
+                                            <div class="advantage__item-img">
+                                                <picture>
+                                                    <source srcset="images/shower.webp" type="image/webp">
+                                                    <img src="images/shower.png">
+                                                </picture>
+                                            </div>
+                                            <div class="advantage__item-text">
+                                                Собственная ванная комната
+                                            </div>
+                                        </div>
+                                        <div class="advantage__item">
+                                            <div class="advantage__item-img">
+                                                <picture>
+                                                    <source srcset="images/house.webp" type="image/webp">
+                                                    <img src="images/house.png">
+                                                </picture>
+                                            </div>
+                                            <div class="advantage__item-text">
+                                                Апартаменты
+                                            </div>
+                                        </div>
+                                        <div class="advantage__item">
+                                            <div class="advantage__item-img">
+                                                <picture>
+                                                    <source srcset="images/household.webp" type="image/webp">
+                                                    <img src="images/household.png">
+                                                </picture>
+                                            </div>
+                                            <div class="advantage__item-text">
+                                                Стиральная машина
+                                            </div>
+                                        </div>
+                                        <div class="advantage__item">
+                                            <div class="advantage__item-img">
+                                                <picture>
+                                                    <source srcset="images/wifi-big.webp" type="image/webp">
+                                                    <img src="images/wifi-big.png">
+                                                </picture>
+                                            </div>
+                                            <div class="advantage__item-text">
+                                                Бесплатный WI-FI
+                                            </div>
+                                        </div>
+                                        <div class="advantage__item">
+                                            <div class="advantage__item-img">
+                                                <picture>
+                                                    <source srcset="images/air-conditioner-big.webp" type="image/webp">
+                                                    <img src="images/air-conditioner-big.png">
+                                                </picture>
+                                            </div>
+                                            <div class="advantage__item-text">
+                                                Кондиционер
+                                            </div>
+                                        </div>
+                                        <div class="advantage__item">
+                                            <div class="advantage__item-img">
+                                                <picture>
+                                                    <source srcset="images/shower.webp" type="image/webp">
+                                                    <img src="images/shower.png">
+                                                </picture>
+                                            </div>
+                                            <div class="advantage__item-text">
+                                                Собственная ванная комната
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <div class="main-info__bottom">
+                            <div class="variant-box__text">
+                                <div class="variant-box__title">
+                                    Один из лучших вариантов, выбранных нами в городе Киев.
+                                </div>
+                                <div class="variant-box__par-wrap">
+                                    <p class="variant-box__par first">
+                                        Апартаменты Central Kiev расположены по разным адресам в Киеве. Гостям предлагается широкий выбор просторных номеров и апартаментов в украинской столице. Все они располагают кондиционером, ванной комнатой, телефоном и холодильником.
+                                    </p>
+                                    <p class="variant-box__par second">
+                                        Wi-Fi предоставляется бесплатно во всех номерах. В некоторых номерах и апартаментах Central Kiev также есть кабельное телевидение и балкон с исключительным видом на город.
+                                    </p>
+                                    <p class="variant-box__par third">
+                                        В других номерах также имеется столовая и гостиная с удобствами для приготовления чая и кофе. Предоставляются тапочки, стиральная машина и гладильные принадлежности.
+                                    </p>
+                                    <p class="variant-box__par fourth">
+                                        Апартаменты Central Kiev предлагают гостям столицы альтернативу привычному размещению в отеле. Организуется трансфер от/до аэропорта.
+                                    </p>
+                                </div>
+                                <div class="variant-box__expand btn-move">
+                                    <span>
+                                        Развернуть
+                                    </span>
+                                </div>
+                                <div class="variant-box__roll-up btn-move">
+                                    <span>
+                                        Свернуть
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="variant-box">
+                                <div class="variant-detail">
+                                    <div class="variant-detail__title">
+                                        Подробности заявки
+                                    </div>
+                                    <form class="variant-form">
+                                        <div class="variant-form__box">
+                                            <div class="variant-form__text">
+                                                Максимальное количество взрослый X и детей X
+                                                <input type="text" placeholder="2 взрослых          2 детей">
+                                            </div>
+                                        </div>
+                                        <div class="variant-form__box enter-exit">
+                                            <div class="variant-form__enter">
+                                                Заезд
+                                                <input id="datepicker-2" type="text" placeholder="20.09.2020">
+                                            </div>
+                                            <div class="variant-form__exit">
+                                                Отъезд
+                                                <input id="datepicker-3" type="text" placeholder="20.09.2020">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="know-price">
+                                            Узнать цену
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="variant-info">
+                                    <div class="variant-info__text">
+                                        Надежная информация
+                                    </div>
+                                    <div class="variant-info__descr">
+                                        Гости считают, что описание и фотографии этого варианта <span>полностью
+                                            соответствуют действительности.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="service__title">
+                            Удобства и услуги — Central Dayflat Apartments
+                            <span class="service__triangle">
+                                <div class="service__triangle-top"></div>
+                                <div class="service__triangle-bottom"></div>
+                            </span>
+                        </div>
+                        <div class="service__box">
+                            <div class="service__col first">
+                                <div class="service__col-item">
+                                    <div class="service__col-title bathroom">
+                                        Ванная комната
+                                    </div>
+                                    <ul class="service__col-list">
+                                        <li class="list__item">
+                                            <span></span> Собственная ванная комната
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Бесплатные туалетно- <br> косметические принадлежности
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Туалет
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Ванна или душ
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Полотенца
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Белье
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Тапочки
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Фен
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Туалетная бумага
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="service__col-item">
+                                    <div class="service__col-title bed">
+                                        Спальня
+                                    </div>
+                                    <ul class="service__col-list">
+                                        <li class="list__item">
+                                            <span></span> Шкаф или гардероб
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="service__col-item">
+                                    <div class="service__col-title dishwasher">
+                                        Кухня
+                                    </div>
+                                    <ul class="service__col-list">
+                                        <li class="list__item">
+                                            <span></span> Стиральная машина
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Холодильник
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Микроволновая печь
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Кухонные принадлежности
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Электрический чайник
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Плита
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Обеденный стол
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="service__col-item">
+                                    <div class="service__col-title bed">
+                                        Удобства в номере
+                                    </div>
+                                    <ul class="service__col-list">
+                                        <li class="list__item">
+                                            <span></span> Вешалка для одежды
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Сушилка для одежды
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="service__col second">
+                                <div class="service__col-item">
+                                    <div class="service__col-title lamp">
+                                        Гостиная зона
+                                    </div>
+                                    <ul class="service__col-list">
+                                        <li class="list__item">
+                                            <span></span> Обеденный уголок
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="service__col-item">
+                                    <div class="service__col-title television">
+                                        Медиа и технологии
+                                    </div>
+                                    <ul class="service__col-list">
+                                        <li class="list__item">
+                                            <span></span> Телевизор
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Телевизор с плоским экраном
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Кабельная каналы
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="service__col-item">
+                                    <div class="service__col-title wifi">
+                                        Интернет
+                                    </div>
+                                    <ul class="service__col-list">
+                                        <li class="list__item">
+                                            <span></span> Wi-Fi предоставляется в номерах отеля бесплатно
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="service__col-item">
+                                    <div class="service__col-title parking-sign">
+                                        Парковка
+                                    </div>
+                                    <ul class="service__col-list">
+                                        <li class="list__item">
+                                            <span></span> Станция зарядки электромобилей
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Уличная парковка
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="service__col-item">
+                                    <div class="service__col-title doorway">
+                                        Характеристики здания
+                                    </div>
+                                    <ul class="service__col-list">
+                                        <li class="list__item">
+                                            <span></span> Частная квартира в многоквартирном здании
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="service__col-item">
+                                    <div class="service__col-title bus">
+                                        Транспорт
+                                    </div>
+                                    <ul class="service__col-list">
+                                        <li class="list__item">
+                                            Трансфер
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Трансфер в аэропорт <br> (оплачивается отдельно)
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Трансфер из аэропорта <br> (оплачивается отдельно)
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Трансфер от/до аэропорта <br> (оплачивается отдельно)
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Трансфер <br> (оплачивается отдельно)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="service__col third">
+                                <div class="service__col-item">
+                                    <div class="service__col-title hotel">
+                                        Стойка регистрации
+                                    </div>
+                                    <ul class="service__col-list">
+                                        <li class="list__item">
+                                            <span></span> Круглосуточная стойка регистрации
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="service__col-item">
+                                    <div class="service__col-title air-conditioner">
+                                        Разное
+                                    </div>
+                                    <ul class="service__col-list">
+                                        <li class="list__item">
+                                            <span></span> Кондиционер
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Курение на всей территории запрещено
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Отопление
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Звукоизолированные номера
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Люкс для новобрачных
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Семейные номера
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Номера для некурящих
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="service__col-item">
+                                    <div class="service__col-title info">
+                                        Общее
+                                    </div>
+                                    <ul class="service__col-list">
+                                        <li class="list__item">
+                                            <span></span> Кондиционер
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Деревянный или паркетный пол
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Гладильные принадлежности
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Утюг
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> Отопление
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="service__col-item">
+                                    <div class="service__col-title comment">
+                                        Персонал говорит
+                                    </div>
+                                    <ul class="service__col-list">
+                                        <li class="list__item">
+                                            <span></span> на английском
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> на русском
+                                        </li>
+                                        <li class="list__item">
+                                            <span></span> на украинском
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service__roll-up btn-move">
+                            <span>
+                                Свернуть
+                            </span>
+                        </div>
+                    </div>
+                    <div class="condition">
+                        <div class="condition__box">
+                            <div class="condition__inner">
+                                <div class="condition__title">
+                                    Условия размещения
+                                </div>
+                                <div class="condition__descr">
+                                    Central Dayflat Apartments принимает особые пожелания! Добавьте их на следующем шаге!
+                                </div>
+                            </div>
+                            <a class="condition__link" href="#">
+                                Посмотреть места
+                            </a>
+                        </div>
+                        <div class="condition__wrapper">
+                            <div class="condition-top">
+                                <div class="condition-line">
+                                    <div class="condition__text numb">
+                                        <div class="condition__container calendar">
+                                            Заезд
+                                        </div>
+                                    </div>
+                                    <div class="condition__info arrival">
+                                        <div class="condition__info-line">
+                                            <span style="max-width: 50%;"></span>
+                                            <span class="time" style="right: 45%;">14:00</span>
+                                        </div>
+                                        <div class="condition__info-par">
+                                            При регистрации заезда необходимо предъявить удостоверение личности с фотографией и кредитную карту.
+                                        </div>
+                                        <div class="condition__info-par">
+                                            Пожалуйста, сообщите администрации заранее, во сколько вы приедете.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="condition-line">
+                                    <div class="condition__text numb">
+                                        <div class="condition__container calendar">
+                                            Отъезд
+                                        </div>
+                                    </div>
+                                    <div class="condition__info departure">
+                                        <div class="condition__info-line">
+                                            <span style="max-width: 40%;"></span>
+                                            <span class="time" style="left: 25%">12:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="condition-line">
+                                    <div class="condition__text">
+                                        <div class="condition__container reservation">
+                                            Отмена бронирований
+                                        </div>
+                                    </div>
+                                    <div class="condition__info">
+                                        <div class="condition__boxs">
+                                            В зависимости от варианта, который вы здесь бронируете, действуют разные правила отмены:
+                                        </div>
+                                        <div class="condition__wrap">
+                                            <div class="condition__wrap-text">
+                                                Стоимость возвращается частично
+                                            </div>
+                                            <div class="condition__wrap-desc">
+                                                С вас взимается стоимость первой ночи при отмене бронирования. В случае незаезда с вас взимается полная стоимость бронирования.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="condition-line">
+                                    <div class="condition__text">
+                                        <div class="condition__container">
+                                            Предоплата
+                                        </div>
+                                    </div>
+                                    <div class="condition__info prepayment">
+                                        <div class="condition__info-par">
+                                            Правила предоплаты зависят от категории апартаментов. Пожалуйста, ознакомьтесь
+                                            <span>с условиями бронирования апартаментов</span> при выборе апартаментов из показанных выше.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="condition-line">
+                                    <div class="condition__text">
+                                        <div class="condition__container">
+                                            Возвращаем страховой залог
+                                        </div>
+                                    </div>
+                                    <div class="condition__info tax">
+                                        <div class="condition__info-par">
+                                            При заезде необходимо оплатить страховой залог в размере 1000 UAH. Вам вернут полную сумму залога через 0 дней после регистрации отъезда, если объекту размещения не будет причинен ущерб.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="condition-line">
+                                    <div class="condition__text">
+                                        <div class="condition__container">
+                                            Кровати для детей
+                                        </div>
+                                    </div>
+                                    <div class="condition__info">
+                                        <div class="condition__info-par">
+                                            Разрешается проживание детей любого возраста.
+                                        </div>
+                                        <div class="condition__info-par bold">
+                                            Чтобы увидеть точные цены и информацию о наличии мест, при поиске укажите количество детей в вашей группе и их возраст.
+                                        </div>
+                                        <div class="condition__info-par">
+                                            В этом объекте не предусмотрена установка детских кроваток.
+                                        </div>
+                                        <div class="condition__info-par">
+                                            В этом объекте не предусмотрена установка дополнительных кроватей.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="condition-line">
+                                    <div class="condition__text">
+                                        <div class="condition__container pay">
+                                            Карты, которые принимает объект размещения
+                                        </div>
+                                    </div>
+                                    <div class="condition__info">
+                                        <div class="condition__card">
+                                            <picture>
+                                                <source srcset="images/visa.webp" type="image/webp">
+                                                <img src="images/visa.png">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="images/mastercard.webp" type="image/webp">
+                                                <img src="images/mastercard.png">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="images/maestro.webp" type="image/webp">
+                                                <img src="images/maestro.png">
+                                            </picture>
+                                            <picture>
+                                                <source srcset="images/unionpay.webp" type="image/webp">
+                                                <img src="images/unionpay.png">
+                                            </picture>
+                                        </div>
+                                        <div class="condition__info-par">
+                                            Central Dayflat Apartments принимает эти карты и оставляет за собой право предварительного блокирования средств на карте до вашего приезда.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="condition-bottom">
+                                <div class="condition-line">
+                                    <div class="condition__text">
+                                        <div class="condition__container smoke">
+                                            Курение
+                                        </div>
+                                    </div>
+                                    <div class="condition__info">
+                                        <div class="condition__info-par">
+                                            Курение запрещено
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="condition-line">
+                                    <div class="condition__text">
+                                        <div class="condition__container cocktail">
+                                            Вечеринки
+                                        </div>
+                                    </div>
+                                    <div class="condition__info">
+                                        <div class="condition__info-par">
+                                            Нельзя проводить вечеринки/мероприятия
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="condition-line">
+                                    <div class="condition__text">
+                                        <div class="condition__container sleep">
+                                            «Тихие часы»
+                                        </div>
+                                    </div>
+                                    <div class="condition__info">
+                                        <div class="condition__info-par">
+                                            «Тихие часы» для гостей (когда нельзя шуметь): с 22:00 до 09:00.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="condition-line">
+                                    <div class="condition__text">
+                                        <div class="condition__container dog">
+                                            Домашние животные
+                                        </div>
+                                    </div>
+                                    <div class="condition__info">
+                                        <div class="condition__info-par">
+                                            Размещение домашних животных не допускается
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notes">
+                        <div class="notes__box">
+                            <div class="notes__title">
+                                *Примечания
+                            </div>
+                            <a class="notes__link" href="#">
+                                Посмотреть места
+                            </a>
+                        </div>
+                        <div class="notes__wrap">
+                            <div class="notes__par">
+                                Апартаменты находятся по разным адресам.
+                            </div>
+                            <div class="notes__par">
+                                Офис работает круглосуточно и без выходных. В случае прибытия после 18:00 свяжитесь с администрацией апартаментов для получения дополнительных инструкций.
+                                <br> При регистрации заезда необходимо предъявить действительное удостоверение личности с фотографией и кредитную карту. Пожалуйста, примите во внимание, что выполнение особых пожеланий не гарантировано и может потребовать
+                                дополнительной оплаты.
+                            </div>
+                            <div class="notes__par">
+                                При заезде необходимо оплатить страховой залог в размере UAH 1000. Вы получите внесенную сумму во время регистрации отъезда.
+                            </div>
+                            <div class="notes__par">
+                                Пожалуйста, заранее сообщите Central Dayflat Apartments предполагаемое время прибытия. Вы можете использовать поле «Особые пожелания» при бронировании или связаться с объектом размещения напрямую — контактные данные указаны в вашем подтверждении бронирования.
+                            </div>
+                            <div class="notes__par">
+                                В этом объекте нельзя устраивать девичники, мальчишники и другие подобные вечеринки.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="comment">
+        <div class="comment__wrapper">
+            <div class="container">
+                <div class="comment__title">
+                    2801 отзыв о средней оценкой 4,7 из 5
+                </div>
+                <div class="comment__company-wrap">
+                    <div class="comment__company">
+                        <div class="comment__company-item">
+                            <div class="comment__company-img">
+                                <picture>
+                                    <source srcset="images/feefo_platinum.webp" type="image/webp">
+                                    <img src="images/feefo_platinum.png">
+                                </picture>
+                            </div>
+                            <div class="comment__company-rating">
+                                4,8 / 1168 отзывов
+                            </div>
+                        </div>
+                        <div class="comment__company-item">
+                            <div class="comment__company-img">
+                                <picture class="img">
+                                    <source srcset="images/google.webp" type="image/webp">
+                                    <img src="images/google.png">
+                                </picture>
+                                <picture class="img__no-star">
+                                    <source srcset="images/google-mini.webp" type="image/webp">
+                                    <img src="images/google-mini.png">
+                                </picture>
+                            </div>
+                            <div class="comment__company-rating">
+                                4,8 / 1168 отзывов
+                            </div>
+                        </div>
+                        <div class="comment__company-item">
+                            <div class="comment__company-img">
+                                <picture class="img">
+                                    <source srcset="images/reviews.webp" type="image/webp">
+                                    <img src="images/reviews.png">
+                                </picture>
+                                <picture class="img__no-star">
+                                    <source srcset="images/reviews-mini.webp" type="image/webp">
+                                    <img src="images/reviews-mini.png">
+                                </picture>
+                            </div>
+                            <div class="comment__company-rating">
+                                4,8 / 1168 отзывов
+                            </div>
+                        </div>
+                        <div class="comment__company-item">
+                            <div class="comment__company-img">
+                                <picture class="img">
+                                    <source srcset="images/trip-advisor.webp" type="image/webp">
+                                    <img src="images/trip-advisor.png">
+                                </picture>
+                                <picture class="img__no-star">
+                                    <source srcset="images/trip-advisor-mini.webp" type="image/webp">
+                                    <img src="images/trip-advisor-mini.png">
+                                </picture>
+                            </div>
+                            <div class="comment__company-rating">
+                                4,8 / 1168 отзывов
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment__items">
+
+                    <div class="comment__item">
+                        <div class="comment__item-box">
+                            <div class="comment__item-title">
+                                Гранд Отель
+                            </div>
+                            <div class="comment__item-rating rateYo">
+
+                            </div>
+                        </div>
+                        <div class="comment__item-wrap">
+                            <div class="comment__item-name">
+                                Baklanov Andrey
+                            </div>
+                            <div class="comment__item-country">
+                                <div class="country-text">
+                                    Great Britain
+                                </div>
+                                <picture>
+                                    <source srcset="images/great-britain.webp" type="image/webp">
+                                    <img src="images/great-britain.png">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="comment__item-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                        </div>
+                    </div>
+
+                    <div class="comment__item">
+                        <div class="comment__item-box">
+                            <div class="comment__item-title">
+                                Гранд Отель
+                            </div>
+                            <div class="comment__item-rating rateYo">
+
+                            </div>
+                        </div>
+                        <div class="comment__item-wrap">
+                            <div class="comment__item-name">
+                                Baklanov Andrey
+                            </div>
+                            <div class="comment__item-country">
+                                <div class="country-text">
+                                    Great Britain
+                                </div>
+                                <picture>
+                                    <source srcset="images/great-britain.webp" type="image/webp">
+                                    <img src="images/great-britain.png">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="comment__item-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                        </div>
+                    </div>
+
+                    <div class="comment__item">
+                        <div class="comment__item-box">
+                            <div class="comment__item-title">
+                                Гранд Отель
+                            </div>
+                            <div class="comment__item-rating rateYo">
+
+                            </div>
+                        </div>
+                        <div class="comment__item-wrap">
+                            <div class="comment__item-name">
+                                Baklanov Andrey
+                            </div>
+                            <div class="comment__item-country">
+                                <div class="country-text">
+                                    Great Britain
+                                </div>
+                                <picture>
+                                    <source srcset="images/great-britain.webp" type="image/webp">
+                                    <img src="images/great-britain.png">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="comment__item-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                        </div>
+                    </div>
+
+                    <div class="comment__item">
+                        <div class="comment__item-box">
+                            <div class="comment__item-title">
+                                Гранд Отель
+                            </div>
+                            <div class="comment__item-rating rateYo">
+
+                            </div>
+                        </div>
+                        <div class="comment__item-wrap">
+                            <div class="comment__item-name">
+                                Baklanov Andrey
+                            </div>
+                            <div class="comment__item-country">
+                                <div class="country-text">
+                                    Great Britain
+                                </div>
+                                <picture>
+                                    <source srcset="images/great-britain.webp" type="image/webp">
+                                    <img src="images/great-britain.png">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="comment__item-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                        </div>
+                    </div>
+
+                    <div class="comment__item">
+                        <div class="comment__item-box">
+                            <div class="comment__item-title">
+                                Гранд Отель
+                            </div>
+                            <div class="comment__item-rating rateYo">
+
+                            </div>
+                        </div>
+                        <div class="comment__item-wrap">
+                            <div class="comment__item-name">
+                                Baklanov Andrey
+                            </div>
+                            <div class="comment__item-country">
+                                <div class="country-text">
+                                    Great Britain
+                                </div>
+                                <picture>
+                                    <source srcset="images/great-britain.webp" type="image/webp">
+                                    <img src="images/great-britain.png">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="comment__item-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="saving">
+        <div class="saving__wrapper">
+            <div class="container">
+                <div class="saving__inner">
+                    <div class="saving__title">
+                        Сэкономьте время и деньги
+                    </div>
+                    <div class="saving__subtitle">
+                        Подпишитесь, и мы вышлем вам лучшие предложения
+                    </div>
+                    <form>
+                        <div class="saving__btn">
+                            <div class="saving__email btn">
+                                <input class="btn-text" type="text" placeholder="Введите Ваш E-mail">
+                            </div>
+                            <div class="saving__subscribe btn">
+                                <button class="btn-submit" type="submit">
+                                    Подписаться
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__logo">
+                        <a href="#">
+                            <picture>
+                                <source srcset="images/logo-footer.webp" type="image/webp">
+                                <img src="images/logo-footer.png">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="footer__info">
+                        <div class="footer__text">
+                            Copyright © 1996–2020 findon™.
+                        </div>
+                        <div class="footer__text">
+                            Все права защищены.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
