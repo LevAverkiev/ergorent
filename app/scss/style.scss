@@ -43,13 +43,21 @@ input {
     padding: 0;
     outline: none;
     &::placeholder {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 400;
         color: #5a5963;
     }
     &:disabled {
+        opacity: 1;
         background-color: #fff;
-        border-color: transparent;
+    }
+}
+
+.form-box {
+    .hasDatepicker {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        color: #5a5963;
     }
 }
 
@@ -287,18 +295,18 @@ body {
     &.form-boxs {
         &::before {
             position: absolute;
-            left: 21px;
+            left: 10px;
             top: 50%;
             transform: translateY(-50%);
             content: '';
-            background-image: url('../images/bed.webp');
+            background-image: url('../images/bed.png');
             width: 21px;
             height: 15px;
             z-index: 1;
         }
         &.adult {
             &::before {
-                background-image: url('../images/user.webp');
+                background-image: url('../images/user.png');
                 width: 18px;
                 height: 21px;
             }
@@ -308,23 +316,22 @@ body {
         width: 100%;
         height: 50px;
         border-radius: 10px;
-        padding-left: 60px;
+        padding-left: 40px;
         position: relative;
-    }
-}
-
-.no-webp {
-    .form-box {
-        &.form-boxs {
-            &::before {
-                background-image: url('../images/bed.png');
-            }
-            &.adult {
-                &::before {
-                    background-image: url('../images/user.png');
-                }
-            }
+        font-size: 15px;
+        &:disabled {
+            opacity: 1;
         }
+    }
+    select {
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        padding-left: 40px;
+        position: relative;
+        appearance: none;
+        font-size: 15px;
+        background-color: #fff;
     }
 }
 
@@ -342,7 +349,7 @@ body {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: 20px;
+        left: 10px;
         background-image: url('../images/calendar.png');
         width: 21px;
         height: 21px;
@@ -360,6 +367,7 @@ body {
         line-height: 50px;
         border-radius: 10px;
         text-indent: 15px;
+        cursor: pointer;
     }
 }
 
@@ -743,15 +751,7 @@ body {
         transform: translateY(-50%);
         width: 34px;
         height: 34px;
-        background-image: url('../images/star-black.webp');
-    }
-}
-
-.no-webp {
-    .variant-box__title {
-        &::before {
-            background-image: url('../images/star-black.png');
-        }
+        background-image: url('../images/star-black.png');
     }
 }
 
@@ -793,6 +793,9 @@ body {
         border-radius: 5px;
         margin-top: 7px;
         text-indent: 20px;
+        &:disabled {
+            background-color: #fff;
+        }
     }
     &__box {
         padding-left: 43px;
@@ -802,7 +805,7 @@ body {
             position: absolute;
             top: 0;
             left: 0;
-            background-image: url('../images/star-green.webp');
+            background-image: url('../images/star-green.png');
             width: 28px;
             height: 28px;
         }
@@ -824,6 +827,28 @@ body {
             }
         }
     }
+    &__wrap {
+        display: flex;
+        margin-top: 7px;
+        select {
+            height: 35px;
+            width: 110px;
+            appearance: none;
+            text-indent: 15px;
+            cursor: pointer;
+            background-color: #fff;
+        }
+        .parent {
+            border-radius: 0px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        .children {
+            border-radius: 0px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
     &__enter,
     &__exit {
         width: 105px;
@@ -838,16 +863,6 @@ body {
     }
     &__exit {
         margin-left: 10px;
-    }
-}
-
-.no-webp {
-    .variant-form {
-        &__box {
-            &::before {
-                background-image: url('../images/star-green.png');
-            }
-        }
     }
 }
 
@@ -959,91 +974,91 @@ body {
         }
         &.bathroom {
             &::before {
-                background-image: url('../images/bathroom.webp');
+                background-image: url('../images/bathroom.png');
                 width: 32px;
                 height: 31px;
             }
         }
         &.bed {
             &::before {
-                background-image: url('../images/bed-fill.webp');
+                background-image: url('../images/bed-fill.png');
                 width: 30px;
                 height: 26px;
             }
         }
         &.dishwasher {
             &::before {
-                background-image: url('../images/dishwasher.webp');
+                background-image: url('../images/dishwasher.png');
                 width: 26px;
                 height: 29px;
             }
         }
         &.lamp {
             &::before {
-                background-image: url('../images/lamp.webp');
+                background-image: url('../images/lamp.png');
                 width: 32px;
                 height: 31px;
             }
         }
         &.television {
             &::before {
-                background-image: url('../images/television.webp');
+                background-image: url('../images/television.png');
                 width: 32px;
                 height: 21px;
             }
         }
         &.wifi {
             &::before {
-                background-image: url('../images/wifi.webp');
+                background-image: url('../images/wifi.png');
                 width: 32px;
                 height: 27px;
             }
         }
         &.parking-sign {
             &::before {
-                background-image: url('../images/parking-sign.webp');
+                background-image: url('../images/parking-sign.png');
                 width: 30px;
                 height: 31px;
             }
         }
         &.doorway {
             &::before {
-                background-image: url('../images/doorway.webp');
+                background-image: url('../images/doorway.png');
                 width: 21px;
                 height: 32px;
             }
         }
         &.bus {
             &::before {
-                background-image: url('../images/bus.webp');
+                background-image: url('../images/bus.png');
                 width: 32px;
                 height: 31px;
             }
         }
         &.hotel {
             &::before {
-                background-image: url('../images/hotel.webp');
+                background-image: url('../images/hotel.png');
                 width: 32px;
                 height: 27px;
             }
         }
         &.air-conditioner {
             &::before {
-                background-image: url('../images/air-conditioner.webp');
+                background-image: url('../images/air-conditioner.png');
                 width: 32px;
                 height: 23px;
             }
         }
         &.info {
             &::before {
-                background-image: url('../images/info.webp');
+                background-image: url('../images/info.png');
                 width: 32px;
                 height: 32px;
             }
         }
         &.comment {
             &::before {
-                background-image: url('../images/comment.webp');
+                background-image: url('../images/comment.png');
                 width: 34px;
                 height: 31px;
             }
@@ -1069,104 +1084,6 @@ body {
         }
         &+.list__item {
             margin-top: 25px;
-        }
-    }
-}
-
-.no-webp {
-    .service__col {
-        &-title {
-            &.bathroom {
-                &::before {
-                    background-image: url('../images/bathroom.png');
-                    width: 32px;
-                    height: 31px;
-                }
-            }
-            &.bed {
-                &::before {
-                    background-image: url('../images/bed-fill.png');
-                    width: 30px;
-                    height: 26px;
-                }
-            }
-            &.dishwasher {
-                &::before {
-                    background-image: url('../images/dishwasher.png');
-                    width: 26px;
-                    height: 29px;
-                }
-            }
-            &.lamp {
-                &::before {
-                    background-image: url('../images/lamp.png');
-                    width: 32px;
-                    height: 31px;
-                }
-            }
-            &.television {
-                &::before {
-                    background-image: url('../images/television.png');
-                    width: 32px;
-                    height: 21px;
-                }
-            }
-            &.wifi {
-                &::before {
-                    background-image: url('../images/wifi.png');
-                    width: 32px;
-                    height: 27px;
-                }
-            }
-            &.parking-sign {
-                &::before {
-                    background-image: url('../images/parking-sign.png');
-                    width: 30px;
-                    height: 31px;
-                }
-            }
-            &.doorway {
-                &::before {
-                    background-image: url('../images/doorway.png');
-                    width: 21px;
-                    height: 32px;
-                }
-            }
-            &.bus {
-                &::before {
-                    background-image: url('../images/bus.png');
-                    width: 32px;
-                    height: 31px;
-                }
-            }
-            &.hotel {
-                &::before {
-                    background-image: url('../images/hotel.png');
-                    width: 32px;
-                    height: 27px;
-                }
-            }
-            &.air-conditioner {
-                &::before {
-                    background-image: url('../images/air-conditioner.png');
-                    width: 32px;
-                    height: 23px;
-                }
-            }
-            &.info {
-                &::before {
-                    background-image: url('../images/info.png');
-                    width: 32px;
-                    height: 32px;
-                }
-            }
-            &.comment {
-                &::before {
-                    background-image: url('../images/comment.png');
-                    width: 34px;
-                    height: 31px;
-                }
-            }
         }
     }
 }
@@ -1218,20 +1135,20 @@ body {
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        background-image: url('../images/info.webp');
+        background-image: url('../images/info.png');
         width: 32px;
         height: 32px;
     }
     &.calendar {
         &::before {
-            background-image: url('../images/calendar-fill.webp');
+            background-image: url('../images/calendar-fill.png');
             width: 31px;
             height: 31px;
         }
     }
     &.pay {
         &::before {
-            background-image: url('../images/pay.webp');
+            background-image: url('../images/pay.png');
             width: 33px;
             height: 24px;
             top: 0;
@@ -1240,82 +1157,30 @@ body {
     }
     &.smoke {
         &::before {
-            background-image: url('../images/smoke.webp');
+            background-image: url('../images/smoke.png');
             width: 34px;
             height: 23px;
         }
     }
     &.cocktail {
         &::before {
-            background-image: url('../images/cocktail.webp');
+            background-image: url('../images/cocktail.png');
             width: 32px;
             height: 34px;
         }
     }
     &.sleep {
         &::before {
-            background-image: url('../images/sleep.webp');
+            background-image: url('../images/sleep.png');
             width: 34px;
             height: 32px;
         }
     }
     &.dog {
         &::before {
-            background-image: url('../images/dog.webp');
+            background-image: url('../images/dog.png');
             width: 34px;
             height: 30px;
-        }
-    }
-}
-
-.no-webp {
-    .condition__container {
-        &::before {
-            background-image: url('../images/info.png');
-        }
-        &.calendar {
-            &::before {
-                background-image: url('../images/calendar-fill.png');
-                width: 31px;
-                height: 31px;
-            }
-        }
-        &.pay {
-            &::before {
-                background-image: url('../images/pay.png');
-                width: 33px;
-                height: 24px;
-                top: 0;
-                transform: translateY(0%);
-            }
-        }
-        &.smoke {
-            &::before {
-                background-image: url('../images/smoke.png');
-                width: 34px;
-                height: 23px;
-            }
-        }
-        &.cocktail {
-            &::before {
-                background-image: url('../images/cocktail.png');
-                width: 32px;
-                height: 34px;
-            }
-        }
-        &.sleep {
-            &::before {
-                background-image: url('../images/sleep.png');
-                width: 34px;
-                height: 32px;
-            }
-        }
-        &.dog {
-            &::before {
-                background-image: url('../images/dog.png');
-                width: 34px;
-                height: 30px;
-            }
         }
     }
 }
@@ -1513,8 +1378,11 @@ body {
     .img__no-star {
         display: none;
     }
-    img {
+    .img {
         display: flex;
+    }
+    .img-mini {
+        display: none;
     }
 }
 
@@ -1622,17 +1490,11 @@ body {
 // end comment
 // start saving
 .saving__wrapper {
-    background-image: url('../images/saving-bg.webp');
+    background-image: url('../images/saving-bg.jpg');
     min-height: 420px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-.no-webp {
-    .saving__wrapper {
-        background-image: url('../images/saving-bg.jpg');
-    }
 }
 
 .saving__inner {

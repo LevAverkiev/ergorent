@@ -20,6 +20,16 @@ $(function() {
     $.datepicker.setDefaults($.datepicker.regional['ru']);
 
 
+    // $("#datepicker-1").datepicker({
+    //     dateFormat: 'DD, dd MM yy',
+    //     showOn: "button",
+    //     buttonImage: "images/calendar.png",
+    //     buttonImageOnly: true,
+    //     minDate: date,
+    //     minDate: 0, - чтобы был
+    // });
+
+
 
     $('.advantage__items').slick({
         slidesToShow: 5,
@@ -53,12 +63,6 @@ $(function() {
                     slidesToShow: 4,
                 }
             },
-            // {
-            //     breakpoint: 551,
-            //     settings: {
-            //         slidesToShow: 3,
-            //     }
-            // },
         ]
     });
 
@@ -89,18 +93,81 @@ $(function() {
     var date = new Date();
     date.setDate(date.getDate() + 1);
 
-    $("#datepicker, #datepicker-1").datepicker({
+    $("#datepicker").datepicker({
+        dateFormat: 'DD, dd MM yy',
+        minDate: 0,
+    });
+
+    $("#datepicker").datepicker().datepicker('setDate', 'today');
+
+    $("#datepicker-1").attr('disabled', 'disabled');
+
+    $("#datepicker-3").attr('disabled', 'disabled');
+
+    $("#datepicker-1").datepicker({
         dateFormat: 'DD, dd MM yy',
         // showOn: "button",
         // buttonImage: "images/calendar.png",
         // buttonImageOnly: true,
-        minDate: date,
+        // minDate: date,
+        minDate: 0,
     });
 
-    $("#datepicker-2, #datepicker-3").datepicker({
-        minDate: date,
+    $("#datepicker-2").datepicker({
+        // minDate: date,
         dateFormat: "dd.mm.yy",
+        minDate: 0,
     });
+
+    let tomorrow = new Date();
+
+    $("#datepicker-1").datepicker().datepicker('setDate', tomorrow);
+
+    $("#datepicker-2").datepicker().datepicker('setDate', 'today');
+
+
+    $("#datepicker-3").datepicker({
+        // minDate: date,
+        dateFormat: "dd.mm.yy",
+        minDate: 0,
+    });
+
+    let tomorrow1 = new Date();
+
+    $("#datepicker-3").datepicker().datepicker('setDate', tomorrow1);
+
+
+    $("#datepicker").on('change', function() {
+        onCheckin();
+    });
+
+    $("#datepicker-2").on('change', function() {
+        onCheckin1();
+    });
+
+    function onCheckin() {
+        if ($("#datepicker").val() !== '') {
+            $("#datepicker-1").removeAttr('disabled');
+            let dateMin = $("#datepicker").datepicker('getDate');
+            let rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
+            $("#datepicker-1").datepicker('option', 'minDate', new Date(rMin));
+        } else {
+            $("#datepicker-1").val('');
+            $("#datepicker-1").attr('disabled', 'disabled');
+        }
+    }
+
+    function onCheckin1() {
+        if ($("#datepicker-2").val() !== '') {
+            $("#datepicker-3").removeAttr('disabled');
+            let dateMin = $("#datepicker-2").datepicker('getDate');
+            let rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
+            $("#datepicker-3").datepicker('option', 'minDate', new Date(rMin));
+        } else {
+            $("#datepicker-3").val('');
+            $("#datepicker-3").attr('disabled', 'disabled');
+        }
+    }
 
     $('.burger-menu').on('click', function() {
         $('.menu').slideToggle();
@@ -129,6 +196,9 @@ $(function() {
         $('.variant-box__par-wrap').removeClass('active');
         $('.variant-box__expand').css('display', 'block');
         $('.variant-box__roll-up').css('display', 'none');
+        $('html, body').animate({
+            scrollTop: $('.variant-box__title').offset().top - 200,
+        }, 400);
     });
 
     $('.service__expand span').on('click', function() {

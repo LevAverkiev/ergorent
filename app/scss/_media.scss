@@ -105,14 +105,14 @@
         .img__no-star {
             display: block;
         }
+        .img-mini {
+            display: flex;
+        }
     }
     .comment__company {
         align-items: center;
         justify-content: space-between;
     }
-}
-
-@media(max-width: 1100px) {
     .header__box {
         .elem {
             &.elem {
@@ -524,6 +524,13 @@
     .service__box {
         display: none;
     }
+    .service {
+        padding-bottom: 20px;
+        margin-bottom: 65px;
+    }
+    .service__title {
+        margin-bottom: 10px;
+    }
     .list__item {
         font-size: 12px;
     }
@@ -923,11 +930,6 @@
             padding-left: 45px;
             &::placeholder {
                 font-size: 14px;
-            }
-        }
-        &.form-boxs {
-            &::before {
-                left: 15px;
             }
         }
     }
