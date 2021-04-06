@@ -609,6 +609,11 @@ body {
     display: flex;
     justify-content: space-between;
     max-width: 1000px;
+    &__item {
+        img {
+            max-width: 240px;
+        }
+    }
 }
 
 .imglist {
@@ -1270,8 +1275,8 @@ body {
 .condition__card {
     margin-bottom: 20px;
     display: flex;
-    picture {
-        &+picture {
+    img {
+        &+img {
             margin-left: 20px;
         }
     }

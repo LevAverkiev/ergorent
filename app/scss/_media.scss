@@ -664,6 +664,7 @@
         max-width: 180px;
         img {
             width: 100%;
+            max-width: 180px;
         }
         &.background {
             .substrate {
@@ -836,6 +837,9 @@
             .substrate {
                 font-size: 12px;
             }
+        }
+        img {
+            max-width: 130px;
         }
     }
     .condition__box {
